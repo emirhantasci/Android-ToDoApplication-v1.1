@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".yapilacakislem">
+
+    <Button
+        android:id="@+id/sil"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="delete"
+        android:shadowColor="#6420A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
+        android:text="Sil"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/islemText"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="selectImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectfoto"
+        tools:srcCompat="@drawable/selectfoto" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="318dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Yapılacak işlem"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/islemText"
+        android:layout_width="317dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Yapılacak işlem hakkında bilgi veriniz."
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarihView" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="save"
+        android:shadowColor="#6420A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
+        android:text="Kaydet"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/islemText"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/alarm"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="alarm"
+        android:shadowColor="#6420A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
+        android:text="Alarm"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sil"
+        app:layout_constraintStart_toEndOf="@+id/save"
+        app:layout_constraintTop_toBottomOf="@+id/islemText"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/alarmyazisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kurulan Alarm:  "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/islemText" />
+
+    <TextView
+        android:id="@+id/tarihView"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Tarih: "
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/tarihsec"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:onClick="tarihSec"
+        android:text="Seç"
+        android:textColorHighlight="@color/teal_700"
+        android:textColorLink="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:rippleColor="@color/teal_200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
